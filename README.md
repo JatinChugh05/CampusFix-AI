@@ -2,17 +2,25 @@
 
 > Turning student complaints into actionable campus intelligence.
 
-CampusFix AI is an AI-powered campus issue reporting platform. Students still raise and track complaints; Gemini helps classify, summarize, analyze evidence, identify similar complaints, and ground admin decisions in live MySQL data.
+CampusFix AI is an AI-powered campus issue reporting platform. Students can raise and track complaints, while Gemini helps classify complaints, summarize issues, analyze evidence, identify similar complaints, cluster recurring issues, and support administrators with insights grounded in live MySQL data.
 
 <p align="center">
-  <img src="screenshots/login.png" alt="CampusFix AI Login" width="900">
+  <img src="screenshots/01-landing-page.png" alt="CampusFix AI Landing Page" width="900">
 </p>
+
+---
 
 ## Overview
 
-Campus complaint handling often becomes difficult when requests are scattered across messages, registers, or informal channels. CampusFix AI brings the complete workflow into one place with role-based access, complaint tracking, evidence uploads, notifications, analytics, feedback, secure account recovery, and AI-assisted complaint analysis.
+Campus complaint handling often becomes difficult when requests are scattered across messages, registers, or informal channels.
 
-### Highlights
+CampusFix AI brings the complete workflow into one platform with role-based access, complaint tracking, evidence uploads, notifications, analytics, feedback, secure account recovery, and AI-assisted complaint analysis.
+
+The goal is to move campus issue management from **reactive complaint handling to proactive campus intelligence**.
+
+---
+
+## Highlights
 
 - Student and Admin role-based dashboards
 - Complaint creation, editing, deletion, tracking, and history
@@ -24,76 +32,76 @@ Campus complaint handling often becomes difficult when requests are scattered ac
 - Complaint analytics and feedback insights
 - OTP-based password recovery
 - Security-focused API and upload validation
-- Gemini AI complaint analyzer (student reviews before submit)
-- Gemini image assessment for evidence photos
+- Gemini AI complaint analysis before submission
+- Gemini image analysis for evidence photos
 - Similar / duplicate complaint detection
 - AI Issue Clustering for grouping related unresolved complaints
-- AI Campus Insights for admins, grounded in real database aggregates
+- AI Campus Insights for administrators
+- AI recommendations grounded in real complaint data
 
 ---
 
 ## Screenshots
 
+### Landing Page
+
+<p align="center">
+  <img src="screenshots/01-landing-page.png" alt="CampusFix AI Landing Page" width="900">
+</p>
+
+### Login
+
+<p align="center">
+  <img src="screenshots/02-login-page.png" alt="CampusFix AI Login Page" width="900">
+</p>
+
 ### Student Dashboard
 
 <p align="center">
-  <img src="screenshots/student-dashboard.png" alt="Student Dashboard" width="900">
-</p>
-
-### Raise a Complaint
-
-<p align="center">
-  <img src="screenshots/raise-complaint-top.png" alt="Raise Complaint Form - Top" width="48%">
-  <img src="screenshots/raise-complaint-bottom.png" alt="Raise Complaint Form - Bottom" width="48%">
+  <img src="screenshots/03-student-dashboard.png" alt="Student Dashboard" width="900">
 </p>
 
 ### Complaint Details
 
 <p align="center">
-  <img src="screenshots/complaint-details.png" alt="Complaint Details" width="900">
+  <img src="screenshots/04-complaint-details.png" alt="Complaint Details" width="900">
 </p>
 
 ### Admin Dashboard
 
 <p align="center">
-  <img src="screenshots/admin-dashboard.png" alt="Admin Dashboard" width="900">
+  <img src="screenshots/05-admin-dashboard.png" alt="Admin Dashboard" width="900">
 </p>
 
 ### Complaint Management
 
 <p align="center">
-  <img src="screenshots/admin-management.png" alt="Admin Complaint Management" width="900">
+  <img src="screenshots/06-admin-complaints.png" alt="Admin Complaint Management" width="900">
 </p>
 
 ### Analytics
 
 <p align="center">
-  <img src="screenshots/analytics.png" alt="Complaint Analytics" width="900">
+  <img src="screenshots/07-admin-analytics.png" alt="Complaint Analytics" width="900">
 </p>
 
 ### Feedback Overview
 
 <p align="center">
-  <img src="screenshots/feedback-overview.png" alt="Feedback Overview" width="900">
-</p>
-
-### Password Recovery
-
-<p align="center">
-<img src="screenshots/forgot-password-v2.png" alt="Forgot Password" width="900">
+  <img src="screenshots/08-admin-feedback.png" alt="Feedback Overview" width="900">
 </p>
 
 ---
 
-## AI-Powered Features
+# AI-Powered Features
 
-### AI Complaint Analysis
+## AI Complaint Analysis
 
 <p align="center">
-  <img src="screenshots/ai-complaint-analysis.png" alt="AI Complaint Analysis" width="900">
+  <img src="screenshots/11-ai-recommendation.png" alt="AI Complaint Recommendation" width="900">
 </p>
 
-Gemini analyzes the student's complaint before submission and provides recommendations for:
+Gemini analyzes a student's complaint before submission and provides recommendations for:
 
 - Category
 - Priority
@@ -103,37 +111,74 @@ Gemini analyzes the student's complaint before submission and provides recommend
 
 Students can review the AI recommendation and accept it before submitting the complaint.
 
-### AI Image Analysis
+---
+
+## AI Image Analysis
 
 <p align="center">
-  <img src="screenshots/ai-image-analysis.png" alt="AI Image Analysis" width="900">
+  <img src="screenshots/12-ai-image-analysis.png" alt="AI Image Analysis" width="900">
 </p>
 
-Gemini can analyze uploaded evidence images to identify visible issues and provide recommendations for category, priority, department, summary, and recommended action.
+Gemini can analyze uploaded evidence images to identify visible issues and provide recommendations for:
 
-### Similar Complaint Detection
+- Category
+- Priority
+- Department
+- Complaint summary
+- Recommended action
+
+This helps convert visual evidence into structured complaint information.
+
+---
+
+## AI-Assisted Complaint Submission
 
 <p align="center">
-  <img src="screenshots/ai-similar-complaints.png" alt="AI Similar Complaint Detection" width="900">
+  <img src="screenshots/13-ai-submission.png" alt="AI-Assisted Complaint Submission" width="900">
 </p>
 
-CampusFix AI compares a new complaint against existing complaints to identify potentially similar or duplicate open issues. This helps students and administrators recognize recurring problems.
+Students can use AI assistance while preparing a complaint. The system helps transform an unstructured description into a clearer and more actionable complaint before it is submitted.
 
-### AI Issue Clustering
+---
+
+## Similar Complaint Detection
+
+The platform compares a new complaint against existing complaints to identify potentially similar or duplicate open issues.
+
+This helps students and administrators recognize recurring problems and avoid treating the same campus issue as completely separate complaints.
+
+---
+
+## AI Issue Clustering
 
 <p align="center">
-  <img src="screenshots/ai-issue-clustering.png" alt="AI Issue Clustering" width="900">
+  <img src="screenshots/10-issue-clustering.png" alt="AI Issue Clustering" width="900">
 </p>
 
-AI Issue Clustering groups related unresolved complaints into broader issue clusters based on their content and context. This helps administrators identify recurring problems that may require coordinated action.
+AI Issue Clustering groups related unresolved complaints into broader issue clusters based on their content and context.
 
-### AI Campus Insights
+This helps administrators identify recurring problems that may require coordinated action rather than handling every complaint independently.
+
+---
+
+## AI Campus Insights
 
 <p align="center">
-  <img src="screenshots/ai-admin-insights.png" alt="AI Campus Insights" width="900">
+  <img src="screenshots/09-ai-insights.png" alt="AI Campus Insights" width="900">
 </p>
 
-Administrators can ask natural-language questions about campus complaints. Gemini uses live complaint data and database aggregates to provide grounded insights about unresolved issues, priorities, categories, departments, and locations.
+AI Campus Insights allows administrators to ask questions about current campus complaints using natural language.
+
+The AI responses are grounded in live database aggregates, allowing administrators to understand patterns such as:
+
+- Number of unresolved complaints
+- Complaint categories
+- Priority distribution
+- Frequently affected locations
+- Unassigned complaints
+- Areas requiring administrative attention
+
+---
 
 ---
 

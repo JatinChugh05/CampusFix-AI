@@ -64,32 +64,35 @@ The goal is to move campus issue management from **reactive complaint handling t
 ### Complaint Details
 
 <p align="center">
-  <img src="screenshots/04-complaint-details.png" alt="Complaint Details" width="900">
-</p>
-
-### Admin Dashboard
-
-<p align="center">
   <img src="screenshots/05-admin-dashboard.png" alt="Admin Dashboard" width="900">
 </p>
 
-### Complaint Management
+
+### Admin Dashboard
 
 <p align="center">
   <img src="screenshots/06-admin-complaints.png" alt="Admin Complaint Management" width="900">
 </p>
 
-### Analytics
+### Complaint Management
 
 <p align="center">
   <img src="screenshots/07-admin-analytics.png" alt="Complaint Analytics" width="900">
 </p>
 
-### Feedback Overview
+### Analytics
 
 <p align="center">
-  <img src="screenshots/08-admin-feedback.png" alt="Feedback Overview" width="900">
+  <img src="screenshots/04-complaint-details.png" alt="Complaint Details" width="900">
 </p>
+
+
+### Feedback Overview
+<p align="center">
+  <img src="screenshots/09-ai-insights.png" alt="AI Campus Insights" width="900">
+</p>
+
+
 
 ---
 
@@ -98,8 +101,9 @@ The goal is to move campus issue management from **reactive complaint handling t
 ## AI Complaint Analysis
 
 <p align="center">
-  <img src="screenshots/11-ai-recommendation.png" alt="AI Complaint Recommendation" width="900">
+  <img src="screenshots/08-admin-feedback.png" alt="Feedback Overview" width="900">
 </p>
+
 
 Gemini analyzes a student's complaint before submission and provides recommendations for:
 
@@ -152,7 +156,7 @@ This helps students and administrators recognize recurring problems and avoid tr
 ## AI Issue Clustering
 
 <p align="center">
-  <img src="screenshots/10-issue-clustering.png" alt="AI Issue Clustering" width="900">
+  <img src="screenshots/11-ai-recommendation.png" alt="AI Complaint Recommendation" width="900">
 </p>
 
 AI Issue Clustering groups related unresolved complaints into broader issue clusters based on their content and context.
@@ -164,7 +168,7 @@ This helps administrators identify recurring problems that may require coordinat
 ## AI Campus Insights
 
 <p align="center">
-  <img src="screenshots/09-ai-insights.png" alt="AI Campus Insights" width="900">
+  <img src="screenshots/10-issue-clustering.png" alt="AI Issue Clustering" width="900">
 </p>
 
 AI Campus Insights allows administrators to ask questions about current campus complaints using natural language.

@@ -417,6 +417,11 @@ Gemini features require `GEMINI_API_KEY`. If the key is missing or Gemini is dow
 
 ---
 
+## Live Demo
+
+**Deployed Application:**  
+https://campusfix-ai-production.up.railway.app
+
 ## Repository
 
 **GitHub:**  

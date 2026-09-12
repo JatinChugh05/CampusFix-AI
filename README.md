@@ -406,8 +406,6 @@ Gemini features require `GEMINI_API_KEY`. If the key is missing or Gemini is dow
 
 ## Future Improvements
 
-- Production hosting
-- Managed cloud MySQL database
 - Verified custom email domain
 - Department-specific administrator accounts
 - Real-time notifications

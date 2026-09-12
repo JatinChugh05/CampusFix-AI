@@ -101,9 +101,8 @@ The goal is to move campus issue management from **reactive complaint handling t
 ## AI Complaint Analysis
 
 <p align="center">
-  <img src="screenshots/04-complaint-details.png" alt="Complaint Details" width="900">
+  <img src="screenshots/13-ai-submission.png" alt="AI-Assisted Complaint Submission" width="900">
 </p>
-
 
 Gemini analyzes a student's complaint before submission and provides recommendations for:
 
@@ -138,7 +137,7 @@ This helps convert visual evidence into structured complaint information.
 ## AI-Assisted Complaint Submission
 
 <p align="center">
-  <img src="screenshots/13-ai-submission.png" alt="AI-Assisted Complaint Submission" width="900">
+  <img src="screenshots/04-complaint-details.png" alt="Complaint Details" width="900">
 </p>
 
 Students can use AI assistance while preparing a complaint. The system helps transform an unstructured description into a clearer and more actionable complaint before it is submitted.

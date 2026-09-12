@@ -125,15 +125,25 @@ const generateContent = async ({
     payload = {};
   }
 
-  if (!response.ok) {
-    const error = new Error(
-      payload?.error?.message || "Gemini request failed."
-    );
-    error.code =
-      response.status === 429 ? "GEMINI_RATE_LIMIT" : "GEMINI_HTTP";
-    error.status = response.status;
-    throw error;
-  }
+if (!response.ok) {
+  const geminiMessage =
+    payload?.error?.message || "Gemini request failed.";
+
+  console.error("Gemini API error:", {
+    status: response.status,
+    statusText: response.statusText,
+    message: geminiMessage,
+  });
+
+  const error = new Error(geminiMessage);
+
+  error.code =
+    response.status === 429 ? "GEMINI_RATE_LIMIT" : "GEMINI_HTTP";
+
+  error.status = response.status;
+
+  throw error;
+}
 
   const text = extractText(payload);
 

@@ -83,16 +83,16 @@ The goal is to move campus issue management from **reactive complaint handling t
 ### Analytics
 
 <p align="center">
-  <img src="screenshots/04-complaint-details.png" alt="Complaint Details" width="900">
+  <img src="screenshots/08-admin-feedback.png" alt="Feedback Overview" width="900">
 </p>
+
+
 
 
 ### Feedback Overview
 <p align="center">
   <img src="screenshots/09-ai-insights.png" alt="AI Campus Insights" width="900">
 </p>
-
-
 
 ---
 
@@ -101,7 +101,7 @@ The goal is to move campus issue management from **reactive complaint handling t
 ## AI Complaint Analysis
 
 <p align="center">
-  <img src="screenshots/08-admin-feedback.png" alt="Feedback Overview" width="900">
+  <img src="screenshots/04-complaint-details.png" alt="Complaint Details" width="900">
 </p>
 
 

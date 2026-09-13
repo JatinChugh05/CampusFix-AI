@@ -3,12 +3,13 @@ const db = require("../config/db");
 const createComplaint = async (req, res) => {
   try {
     const {
-      title,
-      category,
-      location,
-      description,
-      priority,
-    } = req.body;
+  title,
+  category,
+  location,
+  description,
+  priority,
+  assignedDepartment,
+} = req.body;
 
     if (!title || !category || !location || !description) {
       return res.status(400).json({
@@ -23,6 +24,20 @@ const createComplaint = async (req, res) => {
     const selectedPriority = validPriorities.includes(priority)
       ? priority
       : "Medium";
+    const validDepartments = [
+  "Maintenance Team",
+  "Electrical Department",
+  "Plumbing Department",
+  "IT Support",
+  "Housekeeping",
+  "Security Department",
+];
+
+const selectedDepartment = validDepartments.includes(
+  assignedDepartment
+)
+  ? assignedDepartment
+  : null;
 
     const evidenceImage = req.file
       ? `/uploads/${req.file.filename}`
@@ -52,9 +67,10 @@ const createComplaint = async (req, res) => {
          description,
          evidence_image,
          priority,
+         assigned_department,
          due_at
        )
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         req.user.id,
         title.trim(),
@@ -63,6 +79,7 @@ const createComplaint = async (req, res) => {
         description.trim(),
         evidenceImage,
         selectedPriority,
+        selectedDepartment,
         dueAt,
       ]
     );

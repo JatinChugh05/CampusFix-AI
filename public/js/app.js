@@ -1359,13 +1359,19 @@ if (evidenceFile) {
   );
 
   formData.append(
-    "priority",
-    document.getElementById("complaintPriority").value
+  "priority",
+  document.getElementById("complaintPriority").value
   );
 
-  if (evidenceFile) {
-    formData.append("evidence", evidenceFile);
+  const aiDepartment = complaintForm.dataset.aiDepartment;
+
+  if (aiDepartment) {
+  formData.append("assignedDepartment", aiDepartment);
   }
+
+if (evidenceFile) {
+  formData.append("evidence", evidenceFile);
+}
 
   try {
     setButtonLoading(
@@ -1380,6 +1386,7 @@ if (evidenceFile) {
     });
 
     complaintForm.reset();
+    delete complaintForm.dataset.aiDepartment;
     document.getElementById("complaintPriority").value =
       "Medium";
 
@@ -2966,19 +2973,25 @@ function hideAiPanel(element) {
   element.classList.add("hidden");
 }
 
+
+
 function applyAiAnalysisToForm(analysis) {
   if (!analysis) return;
 
   const category = document.getElementById("complaintCategory");
   const priority = document.getElementById("complaintPriority");
   const title = document.getElementById("complaintTitle");
+  const description = document.getElementById("complaintDescription");
 
   if (category && analysis.category) {
     category.value = analysis.category;
   }
 
   if (priority && analysis.priority) {
-    const options = [...priority.options].map((option) => option.value);
+    const options = [...priority.options].map(
+      (option) => option.value
+    );
+
     priority.value = options.includes(analysis.priority)
       ? analysis.priority
       : "Medium";
@@ -2987,7 +3000,19 @@ function applyAiAnalysisToForm(analysis) {
   if (title && analysis.summary && !title.value.trim()) {
     title.value = analysis.summary.slice(0, 150);
   }
+
+  if (description && analysis.summary && !description.value.trim()) {
+    description.value = analysis.summary;
+  }
+
+  if (analysis.recommendedDepartment) {
+    complaintForm.dataset.aiDepartment =
+      analysis.recommendedDepartment;
+  }
 }
+
+
+
 
 function renderAiRecommendation(panel, analysis, options = {}) {
   if (!panel || !analysis) return;
@@ -3113,21 +3138,21 @@ document
     const panel = document.getElementById("aiRecommendationPanel");
     const draft = getComplaintDraft();
 
-    if (draft.description.length < 12) {
-      showToast(
-        "Write a short description of the issue before analyzing with AI.",
-        "error"
-      );
-      document.getElementById("complaintDescription")?.focus();
-      return;
-    }
+    if (draft.title.length < 8 && draft.description.length < 12) {
+  showToast(
+    "Enter a short complaint title before analyzing with AI.",
+    "error"
+  );
+  document.getElementById("complaintTitle")?.focus();
+  return;
+}
 
     try {
       setButtonLoading(button, true, "Analyzing...");
       const data = await apiRequest("/ai/analyze-text", {
         method: "POST",
         body: JSON.stringify({
-          text: draft.description,
+          text: draft.description || draft.title,
           title: draft.title,
           location: draft.location,
         }),

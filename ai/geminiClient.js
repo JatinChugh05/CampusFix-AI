@@ -3,7 +3,7 @@ const MAX_RETRIES = 3;
 const FALLBACK_MODEL = "gemini-3.5-flash-lite";
 
 const isTransientStatus = (status) =>
-  status === 408 || status === 429 || (status >= 500 && status < 600);
+  status === 408 || (status >= 500 && status < 600);
 
 const isFallbackEligible = (status) =>
   status === 503 || (status >= 500 && status < 600);
@@ -210,8 +210,6 @@ if (!response.ok) {
     error.code = "GEMINI_EMPTY";
     throw error;
   }
-
-  console.error("GEMINI TEXT BEFORE JSON PARSE:", text);
 
   if (!json) {
     return { text, raw: payload };

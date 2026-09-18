@@ -388,12 +388,8 @@ const answerAdminInsights = async (question) => {
   const result = await generateContent({
     systemInstruction: prompt.systemInstruction,
     parts: [{ text: prompt.userText }],
+    maxOutputTokens: 2048,
   });
-
-  console.error(
-    "ADMIN INSIGHTS RAW GEMINI TEXT:",
-    result.text
-  );
 
   const answer = String(result.json?.answer || "").trim();
   const usedDataSummary = String(

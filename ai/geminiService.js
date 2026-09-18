@@ -390,6 +390,11 @@ const answerAdminInsights = async (question) => {
     parts: [{ text: prompt.userText }],
   });
 
+  console.error(
+    "ADMIN INSIGHTS RAW GEMINI TEXT:",
+    result.text
+  );
+
   const answer = String(result.json?.answer || "").trim();
   const usedDataSummary = String(
     result.json?.usedDataSummary || ""

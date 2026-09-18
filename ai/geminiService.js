@@ -450,6 +450,7 @@ const clusterComplaints = async () => {
   const result = await generateContent({
     systemInstruction: prompt.systemInstruction,
     parts: [{ text: prompt.userText }],
+    maxOutputTokens: 4096,
   });
 
   const rawClusters = Array.isArray(result.json?.clusters)

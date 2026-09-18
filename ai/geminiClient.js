@@ -109,6 +109,7 @@ const generateContent = async ({
   parts,
   systemInstruction,
   temperature = 0.2,
+  maxOutputTokens = 1024,
   json = true,
 }) => {
   const { apiKey, model } = getGeminiConfig();
@@ -128,7 +129,7 @@ const generateContent = async ({
     ],
     generationConfig: {
       temperature,
-      maxOutputTokens: 1024,
+      maxOutputTokens,
       ...(json ? { responseMimeType: "application/json" } : {}),
     },
   };
@@ -214,7 +215,6 @@ if (!response.ok) {
     return { text, raw: payload };
   }
 
-  console.error("GEMINI RAW TEXT BEFORE JSON PARSE:", text);
   const parsed = parseJsonFromText(text);
 
   if (!parsed || typeof parsed !== "object") {

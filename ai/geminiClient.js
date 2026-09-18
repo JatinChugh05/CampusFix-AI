@@ -211,6 +211,8 @@ if (!response.ok) {
     throw error;
   }
 
+  console.error("GEMINI TEXT BEFORE JSON PARSE:", text);
+
   if (!json) {
     return { text, raw: payload };
   }

@@ -214,6 +214,7 @@ if (!response.ok) {
     return { text, raw: payload };
   }
 
+  console.error("GEMINI RAW TEXT BEFORE JSON PARSE:", text);
   const parsed = parseJsonFromText(text);
 
   if (!parsed || typeof parsed !== "object") {
